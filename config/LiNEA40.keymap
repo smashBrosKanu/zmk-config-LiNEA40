@@ -53,6 +53,10 @@
     };
 };
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
+
 &trackball_listener {
     scroller {
         layers = <SCROLL>;
@@ -62,7 +66,7 @@
             <&zip_xy_to_scroll_mapper>;
     };
 
-    input-processors = <&zip_temp_layer 1 10000>; 
+    input-processors = <&zip_temp_layer 1 250>; 
 };
 
 / {
