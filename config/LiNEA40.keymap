@@ -53,7 +53,7 @@
     };
 };
 
-&zip_temp_layer { require-prior-idle-ms = <200>; };
+&zip_temp_layer { require-prior-idle-ms = <200>; };f
 
 &trackball_listener {
     scroller {
@@ -64,7 +64,7 @@
             <&zip_xy_to_scroll_mapper>;
     };
 
-    input-processors = <&zip_temp_layer 1 250>;
+    input-processors = <&zip_temp_layer 1 10000>;
 };
 
 / {
