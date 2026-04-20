@@ -53,7 +53,14 @@
     };
 };
 
-&zip_temp_layer { require-prior-idle-ms = <200>; };
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+    excluded-positions = <
+        12 // D
+        13 // 
+        17 // 
+    >;
+};
 
 &trackball_listener {
     scroller {
