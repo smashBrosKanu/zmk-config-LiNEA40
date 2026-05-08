@@ -67,7 +67,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 
@@ -146,10 +146,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans    &trans    &trans                    &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB1  &trans                    &trans  &mkp MB2  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans                    &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans                      &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &mkp MB1  &mkp MB3                    &trans  &mkp MB2  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans                      &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans            &trans  &trans  &trans
             >;
         };
 
@@ -166,7 +166,7 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION             &kp LBKT         &kp HASH         &kp DOLLAR     &kp PERCENT                      &kp CARET                 &kp AMPERSAND             &kp ASTERISK              &kp LEFT_PARENTHESIS      &kp LBKT
+&kp EXCLAMATION             &kp LBKT         &kp HASH         &kp DOLLAR     &kp PERCENT                      &kp CARET                 &kp F7                    &kp F8                    &kp F9                    &kp LBKT
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp SEMICOLON  &kp SEMICOLON                    &kp C_MUTE                &kp LS(LBKT)              &kp RIGHT_BRACKET         &kp BACKSLASH             &kp EQUAL
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp APOS       &kp SQT                          &kp LC(LG(LA(NUMBER_0)))  &kp LA(LC(LG(NUMBER_1)))  &kp LC(LG(LA(NUMBER_2)))  &kp LC(LA(LG(NUMBER_3)))  &kp LS(INT1)
 &trans                      &trans           &trans           &trans         &trans         &trans    &trans  &trans                                              &kp ASTERISK              &kp LEFT_PARENTHESIS      &kp LS(QUESTION)
