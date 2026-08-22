@@ -67,7 +67,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 
@@ -137,6 +137,13 @@
             bindings = <&kp F5 &kp ENTER>;
             label = "MACRO_F5ENTER";
         };
+
+        paste_keep_text: paste_keep_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(V) &kp LCTRL &kp RIGHT &kp RIGHT &kp ENTER>;
+            label = "PASTE_KEEP_TEXT";
+        };
     };
 
     keymap {
@@ -164,10 +171,10 @@
 
         SCROLL {
             bindings = <
-&kp LS(LG(S))  &kp HOME        &kp UP_ARROW  &kp END          &kp LA(RIGHT_ARROW)                        &kp COMMA                 &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&kp TAB        &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LA(LEFT_ARROW)                         &kp DOT                   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&trans         &kp PAGE_UP     &trans        &kp PAGE_DOWN    &macro_f5enter                             &kp NUMBER_0              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
-&trans         &trans          &trans        &trans           &trans               &trans    &kp DELETE  &mt LEFT_SHIFT LS(ENTER)                &trans        &trans        &kp KP_MULTIPLY
+&kp LS(LG(S))     &kp HOME        &kp UP_ARROW  &kp END          &kp LA(RIGHT_ARROW)                        &kp COMMA                 &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
+&kp TAB           &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LA(LEFT_ARROW)                         &kp DOT                   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&paste_keep_text  &kp PAGE_UP     &trans        &kp PAGE_DOWN    &macro_f5enter                             &kp NUMBER_0              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans            &trans          &trans        &trans           &trans               &trans    &kp DELETE  &mt LEFT_SHIFT LS(ENTER)                &trans        &trans        &kp KP_MULTIPLY
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
